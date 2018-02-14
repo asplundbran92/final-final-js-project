@@ -135,8 +135,8 @@ searchBtn.addEventListener('click', e => {
 
 const apiEndpoint = `https://wt-ddc905b1e142f13e3b5c309974979921-0.run.webtask.io/YoutubeFinalJSProj?search=${state.searchQuery}` // Call the fetch function passing the url of the API as a parameter
 const start = Date.now();
-        
-			.then(data => {
+        vanillaGet(apiEndpoint)
+			vanillaGet(apiEndpoint).then(data => {
 				state.youTubeVideo = [];
 	        	console.log((Date.now() - start)/1000)
 				for (let i = 0; i < data.data.length; i++) {
